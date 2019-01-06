@@ -86,7 +86,13 @@ class Students extends Component {
         }
     }
     handleClose = () => {
-        this.setState({ show: false });
+        this.setState({ 
+            show: false,
+            name: '',
+            age: '',
+            gender: '',
+            qualification: ''
+        });
     }
     showForm = () => {
         this.setState({ show: true });
@@ -100,7 +106,7 @@ class Students extends Component {
         <div>
             <h1>Students List</h1>
             <span>
-            <i class="fas fa-plus" onClick={this.showForm}></i> 
+            <i className="fas fa-plus" onClick={this.showForm}></i> 
             </span>
             <Row>
                 <AddStudent
@@ -118,8 +124,8 @@ class Students extends Component {
             </Row>
             <Row>
             {
-                this.state.students.map(student => 
-                  <Col lg={4} style={{ border: '1px solid'}}>
+                this.state.students.map((student, index) => 
+                  <Col key={index} lg={4} style={{ border: '1px solid'}}>
                     <StudentTile 
                         currentStudent={student} 
                         edit={this.editStudent}

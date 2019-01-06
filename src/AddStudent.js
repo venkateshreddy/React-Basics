@@ -20,8 +20,8 @@ class AddStudent extends React.Component {
                         </div>
                         <div>
                             <label>Gender:</label>
-                            <input type="radio" name="gender" checked={this.props.gender === 'Male'} onClick={this.props.handleChange} value='Male' /> Male
-                            <input type="radio" name="gender" checked={this.props.gender === 'Female'} onClick={this.props.handleChange} value='Female' /> Female
+                            <input type="radio" name="gender" checked={this.props.gender === 'Male'} onChange={this.props.handleChange} value='Male' /> Male
+                            <input type="radio" name="gender" checked={this.props.gender === 'Female'} onChange={this.props.handleChange} value='Female' /> Female
                         </div>
                         <div>
                             <label>Qualification:</label>

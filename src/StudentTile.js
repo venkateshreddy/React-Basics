@@ -6,8 +6,8 @@ class StudentTile extends React.Component {
         return (
             <div>
                 <div style={{ right: 0, position: 'absolute', padding: '5px' }}>
-                    <i onClick={() => this.props.edit(student._id)} class="fas fa-edit"></i> 
-                    <i id={student._id} onClick={this.props.delete} class="fas fa-trash"></i>    
+                    <i onClick={() => this.props.edit(student._id)} className="fas fa-edit"></i> 
+                    <i id={student._id} onClick={this.props.delete} className="fas fa-trash"></i>    
                 </div>
                 <table>
                     <tbody>
